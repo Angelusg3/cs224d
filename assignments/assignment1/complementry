@@ -1,7 +1,13 @@
 # CS224d #1
 ## Softmax
-$ 
-	softmax(\boldsymbol{x})
-$
+### RHS to LHS
+$$ 
+		softmax(\boldsymbol{x}) = \frac{e^{x_i}}{\sum e^{x_i}} = \frac{e^{x_i}}{\sum e^{x_i}} . \frac{e^{c}}{e^{c}} = 
+	\frac{e^{x_i + c}}{e^c \sum e^{x_i}} = 
+	\frac{e^{x_i + c}}{\sum e^{x_i + c}} = softmax(\boldsymbol{x + c})
+$$
+
+### LHS to RHS
+It is similar to previous. Just multiply with  $ e^{-c} $
 
 ## Neural Network Basics
