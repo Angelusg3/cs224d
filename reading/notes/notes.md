@@ -13,7 +13,8 @@
      x =\begin{bmatrix}
          x_{1} \\
          x_{2} \\
-         x_{3} \\
+         \vdots \\
+         x_{n} \\
         \end{bmatrix}
   \end{equation} $$
   
