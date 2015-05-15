@@ -45,7 +45,7 @@ $$
 ##### The Transpose
 - $(A^{T})^{T} = A$
 - $(AB)^{T} = B^TA^T$
-- $ (A + ⧸⧸B)^{T} = A^T + B^T$ 
+- $ (A + B)^{T} = A^T + B^T$ 
 ##### Symmetric Matrices
 A square matrix $A \in \mathbb{R} ^{n×n}$ is **symmetric** if $A = A^T$ and **anti-symmetric** if $ A = - A^T$.
 Any square matrix can be represented as a sum of symmetric matrix and anti-symmetric matrix:
