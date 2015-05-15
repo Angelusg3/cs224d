@@ -52,9 +52,16 @@ Any square matrix can be represented as a sum of symmetric matrix and anti-symme
 $$ A = \frac{1}{2}(A + A^T) + \frac{1}{2}(A - A^T)$$
  It is common to denote the set of all symmetric matrices of size n as $\mathbb{S}^n$ , so that $A \in \mathbb{S}^n$ means that $A$ is a symmetric $n \times n$ matrix.
 
+##### The Trace
+The **trace** of square matrix $A \in \mathbb{R} ^{n×n}$ is: $$trA = \sum_{i = 1}^{n}A_{ii}$$.
+The trace has the following properties:
+- $trA = trA^T$
+- $tr(A + B) = trA + trB$
+- $tr(tA) = t(trA)$
+- $tr AB = tr BA$
+- $ tr ABC = tr BCA = tr ACB $
 
-
-
+some notes
 
 
 ### Probability Review
