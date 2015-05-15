@@ -34,7 +34,27 @@ C &= \sum_{k = 1}^{n}a_{k}b^{T}_{k}
 \end{align*}
 $$
  - set of matrix vector product
- 
+
+#### Basic Properties of Matrix Multiplication
+- Matrix multiplication is associative: $(AB)C = A(BC)$ 
+- Matrix multiplication is distributive : $ A(B + C) = AB + AC $
+- Matrix multiplication is not commutative: $ AB \ne BA $
+
+#### Operations and Properties
+##### The Identity Matrix and Diagonal Matrices
+##### The Transpose
+- $(A^{T})^{T} = A$
+- $(AB)^{T} = B^TA^T$
+- $ (A + ⧸⧸B)^{T} = A^T + B^T$ 
+##### Symmetric Matrices
+A square matrix $A \in \mathbb{R} ^{n×n}$ is **symmetric** if $A = A^T$ and **anti-symmetric** if $ A = - A^T$.
+Any square matrix can be represented as a sum of symmetric matrix and anti-symmetric matrix:
+$$ A = \frac{1}{2}(A + A^T) + \frac{1}{2}(A - A^T)$$
+ It is common to denote the set of all symmetric matrices of size n as $\mathbb{S}^n$ , so that $A \in \mathbb{S}^n$ means that $A$ is a symmetric $n \times n$ matrix.
+
+
+
+
 
 
 ### Probability Review
