@@ -1,0 +1,3 @@
+[submodule "codes/word2vec/ref/word2vec_orig"]
+	path = codes/word2vec/ref/word2vec_orig
+	url = git@github.com:alishir/word2vec.git
