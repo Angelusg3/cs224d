@@ -17,13 +17,15 @@ def softmax(x):
 
     ### YOUR CODE HERE
     # subtracting max of each row from its elements
-    row_max = x.max(axis=1)
-    x = x - row_max[:, np.newaxis]
+    x = np.matrix(x)
+    nax = len(np.shape(x)) - 1
+    row_max = np.matrix(x.max(axis=nax))
+    x = x - row_max
 
     x = np.exp(x)
-    row_sum = x.sum(axis=1)
-    x = x / row_sum[:, np.newaxis]
+    row_sum = x.sum(axis=nax)
+    x = x / row_sum
 
     ### END YOUR CODE
 
-    return x
+    return np.array(x)
