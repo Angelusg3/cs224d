@@ -34,10 +34,10 @@ def forward_backward_prop(data, labels, params, dimensions = [10, 5, 10]):
     b2 = np.reshape(params[t:t + dimensions[2]], (1, dimensions[2]))
 
     # YOUR CODE HERE: forward propagation
-    A1 = np.dot(data, W1) + b1  # broadcasting on b1
-    Z1 = sigmoid(A1)
-    A2 = np.dot(Z1, W2) + b2
-    Yhat = softmax(A2)  # Y output
+    Z1 = np.dot(data, W1) + b1  # broadcasting on b1
+    A1 = sigmoid(Z1)
+    Z2 = np.dot(A1, W2) + b2
+    Yhat = softmax(Z2)  # Y output
 
     # cost = ...
     index = labels == 1
@@ -48,14 +48,14 @@ def forward_backward_prop(data, labels, params, dimensions = [10, 5, 10]):
     # YOUR CODE HERE: backward propagation
     targets = np.zeros(np.shape(Yhat))
     targets[index] = 1
-    dA2 = Yhat - targets
-    db2 = sum(dA2)
-    dW2 = np.dot(Z1.T, dA2)
+    dZ2 = Yhat - targets
+    db2 = sum(dZ2)
+    dW2 = np.dot(A1.T, dZ2)
 
-    dZ1 = dA2.dot(W2.T)
-    dA1 = np.multiply(sigmoid_grad(Z1), dZ1)
-    db1 = sum(dA1)
-    dW1 = np.dot(data.T, dA1)
+    dA1 = dZ2.dot(W2.T)
+    dZ1 = np.multiply(sigmoid_grad(A1), dA1)
+    db1 = sum(dZ1)
+    dW1 = np.dot(data.T, dZ1)
 
     gradb1 = db1
     gradW1 = dW1

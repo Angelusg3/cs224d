@@ -20,4 +20,4 @@ class TestForward_backward_prop(TestCase):
         # params = np.random.randn((dimensions[0] + 1) * dimensions[1] + (dimensions[1] + 1) * dimensions[2])
         params = initialize_weights(dimensions)
 
-        grad_check(lambda params: forward_backward_prop(data, labels, params), params)
+        self.failUnless(grad_check(lambda params: forward_backward_prop(data, labels, params), params))
